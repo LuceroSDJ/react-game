@@ -5,12 +5,12 @@ import './App.css'
 //array created outside of the component bc it's a constant. It won't change.
 //this way the cards array won't be re-created every time the component gets re-evaluated
 const cardImages = [
-  {'src': '/img/brickPhone.png', matched: false},
-  {'src': '/img/caset.png', matched: false},
-  {'src': '/img/floppyDisk.png', matched: false},
-  {'src': '/img/gamePlayer.png', matched: false},
-  {'src': '/img/tamagotchi.png', matched: false},
-  {'src': '/img/videoGamePlayer.png', matched: false}
+  {'src': process.env.PUBLIC_URL + '/img/brickPhone.png', matched: false},
+  {'src': process.env.PUBLIC_URL + '/img/caset.png', matched: false},
+  {'src': process.env.PUBLIC_URL + '/img/floppyDisk.png', matched: false},
+  {'src': process.env.PUBLIC_URL + '/img/gamePlayer.png', matched: false},
+  {'src': process.env.PUBLIC_URL + '/img/tamagotchi.png', matched: false},
+  {'src': process.env.PUBLIC_URL + '/img/videoGamePlayer.png', matched: false}
 
 ]
 
@@ -107,11 +107,7 @@ function App() {
       </div>
 
       <p>Turns: {turns}</p>
-      
-
     </div>
-    
-
   );
 }
 
