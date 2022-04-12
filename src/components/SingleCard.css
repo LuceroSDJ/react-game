@@ -1,0 +1,46 @@
+.card {
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 6px;
+}
+
+.card .front {
+    /* instead of setting the display to be none, we instead hide it by rotating the front of the card  by 90 deg */
+    transform: rotateY(90deg);
+    /* wait & let the back card rotate first from 90 to 0 deg. */
+    transition: all ease-in 0.2s;
+    /* position absolute - relative to the card parent element */
+    position: absolute;  /* it means that it'll seat on top of the back of the card TAKEN OUT OF NORMAL document flow*/
+}
+.flipped .front {
+    transform: rotateY(0deg); 
+    /* now we can see the image again flat & seating on top of the cover*/
+    transition-delay: 0.2s;
+}
+.card .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+    background: red;
+}
+.flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+/* 
+Default cards:
+"front card" rotates 90deg - we don't see it */
+
+/* className = "flipped"
+    first, "cover card" rotates immediatelly from 0 to 90 deg - no delay - we can't see it 
+    Next, "front card" rotates  from 90 deg to 0 deg - transition-delay 0.2s -  we see it */
+
+/* className = ""
+    first, "front card" rotates back to 90deg with ease-in 0.2s - we can't see it
+    Next, "cover card" waits 0.2s to execute transition all ease-in 0.2s
+*/  
+
