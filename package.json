@@ -1,6 +1,6 @@
 {
   "homepage": "http://lucerosdj.github.io/react-game/",
-  "name": "magic-memory",
+  "name": "react-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
