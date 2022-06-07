@@ -30,7 +30,7 @@ function App() {
   //apply random id to each card
   const shuffleCards = () => {
     const shuffleCards = [...cardImages, ...cardImages]
-      //if we return a # < 0, the order of the 2 items stays the same, else if # > 0, items' order is swaped 
+      //if we return a # < 0, the order of the 2 items stays the same, else if # > 0, items' order is swapped 
       .sort(() => Math.random() - 0.5)
       //next, we want to fire a function for each item inside the new sorted array to add an id
       .map((card) => ({ ...card, id: Math.random() }))
@@ -58,7 +58,7 @@ function App() {
             if(card.src === choiceOne.src) {
               return {...card, matched: true}
             } else {
-              return card
+              return card;
             }
           })
         })
@@ -101,7 +101,7 @@ function App() {
             handleChoice={handleChoice}
             // there are 3 scenarios in which a card should be flipped 
             flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
+            disabled={disabled} 
           />
         ))}
       </div>
